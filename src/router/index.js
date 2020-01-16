@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Texts from '../views/Texts.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'texts',
+    component: Texts
+  },
+  {
+    path: '/semantic',
     name: 'home',
     component: Home
   },

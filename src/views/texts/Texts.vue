@@ -1,7 +1,11 @@
 <template>
   <div>
     <ul v-for="text in texts" :key="text.id">
-      <li>{{text.title}}</li>
+      <li>
+        <router-link :to="`/texts/${text.id}`">
+          {{text.title}}
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>

@@ -18,6 +18,9 @@
         <td>{{text.updated_at}}</td>
       </tr>
     </table>
+    <button v-on:click="goToEditText">
+      編集
+    </button>
     <button v-on:click="deleteText">
       削除
     </button>
@@ -46,6 +49,9 @@ export default {
       axios.delete(`/api/v1/texts/${this.id}`)
         .then(() => this.$router.push('/'))
         .catch(e => console.log(e))
+    },
+    goToEditText() {
+      this.$router.push(`/texts/${this.id}/edit`)
     }
   }
 }

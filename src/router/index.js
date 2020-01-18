@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Texts from '../views/texts/Texts.vue'
 import ShowText from '../views/texts/ShowText.vue'
 import CreateText from '../views/texts/CreateText.vue'
+import EditText from '../views/texts/EditText.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,12 @@ const routes = [
     path: '/texts/:id',
     name: 'showText',
     component: ShowText,
+    props: true,
+  },
+  {
+    path: '/texts/:id/edit',
+    name: 'editText',
+    component: EditText,
     props: true,
   },
   {

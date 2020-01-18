@@ -18,6 +18,9 @@
         <td>{{text.updated_at}}</td>
       </tr>
     </table>
+    <button v-on:click="deleteText">
+      削除
+    </button>
   </div>
 </template>
 
@@ -37,6 +40,13 @@ export default {
     axios.get(`/api/v1/texts/${this.id}`)
       .then(res => this.text = res.data.data)
       .catch(e => console.log(e))
+  },
+  methods: {
+    deleteText() {
+      axios.delete(`/api/v1/texts/${this.id}`)
+        .then(() => this.$router.push('/'))
+        .catch(e => console.log(e))
+    }
   }
 }
 </script>

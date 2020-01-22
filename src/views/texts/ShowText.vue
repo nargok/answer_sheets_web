@@ -24,15 +24,20 @@
     <button v-on:click="deleteText">
       削除
     </button>
+    <AnswerSheetList />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import AnswerSheetList from '../../components/answerSheets/AnswerSheeetList.vue'
 
 export default {
   props: {
     id: String
+  },
+  components: {
+    AnswerSheetList
   },
   data() {
     return {

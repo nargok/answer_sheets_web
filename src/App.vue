@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1 class="app_title">Answer Sheet</h1>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -29,5 +30,10 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.app_title {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
 }
 </style>

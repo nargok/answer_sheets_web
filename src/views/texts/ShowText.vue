@@ -42,15 +42,13 @@ export default {
   components: {
     AnswerSheetList
   },
-  data() {
-    return {
-      text: {}
+  computed: {
+    text() {
+      return this.$store.state.text
     }
   },
   mounted() {
-    axios.get(`/api/v1/texts/${this.id}`)
-      .then(res => this.text = res.data.data)
-      .catch(e => console.log(e))
+    this.$store.dispatch('getTextAction', { textId: this.id })
   },
   methods: {
     deleteText() {

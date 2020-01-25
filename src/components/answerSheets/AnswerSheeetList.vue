@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('/api/v1/texts/1/answer_sheets/')
+    axios.get('/api/v1/texts/1/answer_sheets/')  // TODO テキストIDを取得する
       .then(res => this.answerSheets = res.data.data)
       .catch(e => console.log(e))
   }

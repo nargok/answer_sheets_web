@@ -24,6 +24,9 @@
     <button v-on:click="deleteText">
       削除
     </button>
+    <button v-on:click="goToCreateAnswerSheet">
+      回答用紙をつくる
+    </button>
     <AnswerSheetList />
   </div>
 </template>
@@ -57,6 +60,9 @@ export default {
     },
     goToEditText() {
       this.$router.push(`/texts/${this.id}/edit`)
+    },
+    goToCreateAnswerSheet() {
+      this.$router.push(`/texts/${this.id}/answer_sheets/new`)
     }
   }
 }

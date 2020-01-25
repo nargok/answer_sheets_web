@@ -5,6 +5,7 @@ import Texts from '../views/texts/Texts.vue'
 import ShowText from '../views/texts/ShowText.vue'
 import CreateText from '../views/texts/CreateText.vue'
 import EditText from '../views/texts/EditText.vue'
+import CreateAnswerSheet from '../views/answerSheet/CreateAnswerSheet.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,11 @@ const routes = [
     name: 'editText',
     component: EditText,
     props: true,
+  },
+  {
+    path: '/texts/:id/answer_sheets/new',
+    name: 'createAnswerSheet',
+    component: CreateAnswerSheet,
   },
   {
     path: '/semantic',

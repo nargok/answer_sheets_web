@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Texts from '../views/texts/Texts.vue'
 import ShowText from '../views/texts/ShowText.vue'
 import CreateText from '../views/texts/CreateText.vue'
+import SearchText from '../views/texts/SearchText.vue'
 import EditText from '../views/texts/EditText.vue'
 import CreateAnswerSheet from '../views/answerSheet/CreateAnswerSheet.vue'
 
@@ -19,6 +20,11 @@ const routes = [
     path: '/texts/new',
     name: 'createText',
     component: CreateText
+  },
+  {
+    path: '/texts/search',
+    name: 'searchText',
+    component: SearchText
   },
   {
     path: '/texts/:id',

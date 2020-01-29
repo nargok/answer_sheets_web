@@ -10,26 +10,7 @@
     <div>
       <ul v-for="(b, i) in this.books" :key="i">
         <li class="book__list">
-          <table>
-            <tr>
-              <th>タイトル</th>
-              <td>{{b.volumeInfo.title}}</td>
-            </tr>
-            <tr>
-              <th>出版者</th>
-              <td>{{b.volumeInfo.publisher}}</td>
-            </tr>
-            <tr>
-              <th>出版日</th>
-              <td>{{b.volumeInfo.publishedDate}}</td>
-            </tr>
-            <tr>
-              <th></th>
-              <td>
-                <img :src="b.volumeInfo.imageLinks.smallThumbnail">
-              </td>
-            </tr>
-          </table>
+          <SearchTextItem :book="b" />
         </li>
       </ul>
     </div>
@@ -38,8 +19,12 @@
 
 <script>
 import axios from 'axios'
+import SearchTextItem from './SearchTextItem.vue'
 
 export default {
+  components: {
+    SearchTextItem
+  },
   data() {
     return {
       title: '',

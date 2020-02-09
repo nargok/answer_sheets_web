@@ -5,7 +5,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/texts/new">New</router-link> |
-      <router-link to="/texts/new">探す</router-link>
+      <router-link to="/texts/search">探す</router-link>
     </div>
     <router-view/>
   </div>

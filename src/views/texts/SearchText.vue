@@ -11,6 +11,7 @@
       <ul v-for="(b, i) in this.books" :key="i">
         <li class="book__list">
           <SearchTextItem :book="b" />
+          <button @click="createText">テキストを登録する</button>
         </li>
       </ul>
     </div>
@@ -36,6 +37,9 @@ export default {
       axios.get('https://www.googleapis.com/books/v1/volumes?q=' + this.title)
        .then(res => this.books = res.data.items)
        .catch(e => console.log(e))
+    },
+    createText() {
+      console.info('create text from search component')
     }
   }
 }

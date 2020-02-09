@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img :src="text.image_url">
     <table>
       <tr>
         <th>id: </th>
@@ -8,6 +9,14 @@
       <tr>
         <th>title: </th>
         <td>{{text.title}}</td>
+      </tr>
+      <tr>
+        <th>出版者: </th>
+        <td>{{text.publisher}}</td>
+      </tr>
+      <tr>
+        <th>出版日: </th>
+        <td>{{text.published_date}}</td>
       </tr>
       <tr>
         <th>作成日時: </th>

@@ -51,7 +51,7 @@ export default {
       this.$http.post('/api/v1/texts', {
         title,
         publisher,
-        publidhed_date: publishedDate,
+        published_date: publishedDate,
         image_url: smallThumbnail,
       })
       .then(this.$router.push('/'))

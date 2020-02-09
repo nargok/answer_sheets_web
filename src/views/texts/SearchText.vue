@@ -48,7 +48,14 @@ export default {
       const {
         smallThumbnail,
       } = imageLinks;
-      console.info(title, publisher, publishedDate, smallThumbnail)
+      this.$http.post('/api/v1/texts', {
+        title,
+        publisher,
+        publidhed_date: publishedDate,
+        image_url: smallThumbnail,
+      })
+      .then(this.$router.push('/'))
+      .catch(e => console.error(e))
     }
   }
 }
